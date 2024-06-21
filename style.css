@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(pic6.jpg) ;
+    background-size: cover;
+    width:100%;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    
+}
+@media screen and (max-width:600px){
+    body{background-image: url(pic2.jpg);
+        background-size: cover;
+        backdrop-filter: none;
+    }
+    #answer-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+}
+#mainhead{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+
+}
+.app{
+    background-color: rgba(142, 175, 251, 0.75);
+    width: 90%;
+    max-width: 600px;
+    margin: 130px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+   
+}
+.app h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: midnightblue;
+    /* border-bottom: 1px solid #333; */
+    padding-bottom: 30px;
+    text-align: center;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 22px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+.btn{
+    background: rgba(100, 188, 251, 0.836);
+    color:#222;
+    font-weight: 600;
+    width: 95%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 2px;
+    text-align: left;
+    border-radius: 4px; /*153, 229, 215, 0.715*/
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #090468;
+    color: white;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: midnightblue;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border:0;
+    padding:10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor:pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff8f93;
+}
+#bar{
+    background-color: azure;
+    height:1vh
+}
+.progress-bar {
+	position: relative;
+	width: 90%;
+	height: 0.5em;
+    left: 5%;
+	background-color: #0a2270;
+	border-radius: 1.5em;
+	color: white;
+    transition: all 0.5s;
+    border-color: #222;
+
+}
+
+.progress-bar::before {
+	content: attr(data-label);
+	display: flex;
+	align-items: center;
+	position: absolute;
+    height: 0.5em;
+	width: calc(var(--width, 0) * 1%);
+	min-width: 0rem;
+	max-width: calc(100%);
+	background-color: rgba(39, 160, 246, 0.836);
+	border-radius: 1em;
+    border-color: #222;
+    transition: all 0.5s;
+}
